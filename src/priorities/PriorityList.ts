@@ -38,4 +38,13 @@ export class PriorityList {
   public PriorityOf(name: string): number {
     return this.prios[name];
   }
+
+  /**
+   * Appends a new thing to the priority list.
+   *
+   * @param {string} name The name of the thing to add to the priority list.
+   */
+  public Append(name: string): void {
+    this.prios[name] = Object.keys(this.prios).length;
+  }
 }
