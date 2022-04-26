@@ -5,7 +5,7 @@ const libraryName = 'Bashing'; // name of the resulting library. Used by webpack
 const npmPackageName = 'bashing-js-2'; // Name of the NPM package that should be published
 const projectDescription = 'Second generation Bashing script for IRE Nexus'; // Project description in the NPM package
 const authorEmail = 'keneanung@gmail.com' // author email address
-const docuTitle = 'Second Generation Bashin in Nexus'; // Title of the documentation website
+const docuTitle = 'Second Generation Bashing in Nexus'; // Title of the documentation website
 const docuTagline = 'All new Bashing package'; // Used for documentation website
 
 
