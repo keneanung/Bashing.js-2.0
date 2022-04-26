@@ -35,7 +35,7 @@
     "webpack": "npm test && webpack build --mode development",
     "webpackProd": "npm test && webpack build --mode production",
     "lint": "eslint . --ext .ts",
-    "test": "jest --collect-coverage --config jestconfig.json",
+    "test": "jest --testLocationInResults --collect-coverage --config jestconfig.json",
     "watchTest": "jest --collect-coverage --config jestconfig.json --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.ts\"",
     "prepublishOnly": "npm test && npm run lint && npm run build",
