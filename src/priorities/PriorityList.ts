@@ -2,7 +2,6 @@
  * The priority list of a single area.
  */
 export class PriorityList {
-
   private prios: { [key: string]: number };
 
   /**
@@ -35,7 +34,7 @@ export class PriorityList {
    * @param {string} name The name of the thing to get the priority of.
    * @returns {number} The priority of the given thing.
    */
-  public PriorityOf(name: string): number {
+  public PriorityOf(name: string): number | undefined {
     return this.prios[name];
   }
 
@@ -46,5 +45,14 @@ export class PriorityList {
    */
   public Append(name: string): void {
     this.prios[name] = Object.keys(this.prios).length;
+  }
+
+  /**
+   * Removes the given thing from the priority list.
+   *
+   * @param {string} name The name of the thing to remove from the priority list.
+   */
+  Remove(name: string) {
+    delete this.prios[name];
   }
 }

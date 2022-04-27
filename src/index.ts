@@ -1,6 +1,4 @@
 /**
  * Bashing script.
  */
-export const Bashing = {
-
-}
+export const Bashing = {};
