@@ -43,3 +43,9 @@ test('Should allow removing a thing from the priority list', () => {
   list.Remove('bar');
   expect(list.AsArray()).toEqual(['foo', 'baz']);
 });
+
+test('Should not overwrite existing priorities by appending the same thing twice', () => {
+  const list = new PriorityList(['foo', 'bar', 'baz']);
+  list.Append('bar');
+  expect(list.PriorityOf('bar')).toEqual(1);
+})

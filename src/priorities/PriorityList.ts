@@ -44,6 +44,9 @@ export class PriorityList {
    * @param {string} name The name of the thing to add to the priority list.
    */
   public Append(name: string): void {
+    if (this.prios[name]) {
+      return;
+    }
     this.prios[name] = Object.keys(this.prios).length;
   }
 
