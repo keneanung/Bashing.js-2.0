@@ -24,7 +24,6 @@ class AreaPriorities{
   +Remove(area, name)
 }
 
-Bashing *-- AreaPriorities
 Bashing *-- TargetList
 Bashing *-- Attacker
 Bashing *-- BattlerageTracker
@@ -56,5 +55,6 @@ DenizenAfflictionTracker --> DenizenAffliction
 BashingConfiguration *-- AttackStrategy
 BashingConfiguration *-- FleeConfiguration
 BashingConfiguration *-- BattlerageStrategy
+BashingConfiguration *-- AreaPriorities
 
 ```
