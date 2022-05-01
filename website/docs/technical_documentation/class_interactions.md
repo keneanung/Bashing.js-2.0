@@ -44,28 +44,40 @@ class ITargetPriorityQueryable{
   +getPriority(area, target)
 }
 
-Bashing *-- TargetList
-Bashing *-- Attacker
-Bashing *-- BattlerageTracker
 Bashing *-- ConfigurationService
 
 ITargetPriorityQueryable <|-- ConfigurationService
 ConfigurationService --> Configuration
 
 
+Configuration *-- AreaPriorities
+Configuration *-- BattlerageStrategy
+Configuration *-- AttackStrategy
+
 AreaPriorities *-- PriorityList
+
+Bashing *-- TargetList
+
+Attacker --> TargetList
 
 TargetList --> ITargetPriorityQueryable
 
-Attacker --> TargetList
-Attacker --> QueueManager
-Attacker --> BattlerageTracker
+Bashing *-- Attacker
+
 Attacker --> AttackStrategy
+Attacker --> BattlerageTracker
+
+Bashing *-- BattlerageTracker
+
+Attacker --> QueueManager
 Attacker --> ShieldTracker
 Attacker --> FleeManager
 
 FleeManager --> HealthTracker
 FleeManager --> FleeConfiguration
+
+
+Configuration *-- FleeConfiguration
 
 BattlerageTracker *-- BattlerageAbility
 BattlerageTracker *-- BattlerageAttackStatusTracker
@@ -75,10 +87,5 @@ BattlerageTracker --> DenizenAfflictionTracker
 BattlerageAttackStatusTracker --> BattlerageAbility
 
 DenizenAfflictionTracker --> DenizenAffliction
-
-Configuration *-- AttackStrategy
-Configuration *-- FleeConfiguration
-Configuration *-- BattlerageStrategy
-Configuration *-- AreaPriorities
 
 ```
