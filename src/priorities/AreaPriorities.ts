@@ -32,7 +32,7 @@ export class AreaPriorities {
   }
 
   /**
-   * Returns a serialiozable representation of this object.
+   * Returns a serializable representation of this object.
    *
    * @returns {Object<string,string[]>} A dictionary with an area name as key and a list of things in order of priority.
    */
