@@ -23,7 +23,7 @@ export class AreaPriorities {
    *
    * @param {Object<string,string[]>} priorityDictionary A dictionary with an area name as key and a list of things in order of priority.
    */
-  constructor(priorityDictionary: { [areaName: string]: string[] }) {
+  constructor(priorityDictionary: { [areaName: string]: string[] } = {}) {
     this.priorityLists = {};
 
     for (const areaName in priorityDictionary) {

@@ -24,10 +24,16 @@ class AreaPriorities{
   +Remove(area, name)
 }
 
+class Configuration{
+  +Priorities
+  +Configuration(config)
+  +AsPrimitive()
+}
+
 Bashing *-- TargetList
 Bashing *-- Attacker
 Bashing *-- BattlerageTracker
-Bashing *-- BashingConfiguration
+Bashing *-- Configuration
 
 AreaPriorities *-- PriorityList
 
@@ -52,9 +58,9 @@ BattlerageAttackStatusTracker --> BattlerageAbility
 
 DenizenAfflictionTracker --> DenizenAffliction
 
-BashingConfiguration *-- AttackStrategy
-BashingConfiguration *-- FleeConfiguration
-BashingConfiguration *-- BattlerageStrategy
-BashingConfiguration *-- AreaPriorities
+Configuration *-- AttackStrategy
+Configuration *-- FleeConfiguration
+Configuration *-- BattlerageStrategy
+Configuration *-- AreaPriorities
 
 ```

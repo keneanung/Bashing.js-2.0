@@ -48,4 +48,4 @@ test('Should not overwrite existing priorities by appending the same thing twice
   const list = new PriorityList(['foo', 'bar', 'baz']);
   list.Append('bar');
   expect(list.PriorityOf('bar')).toEqual(1);
-})
+});
