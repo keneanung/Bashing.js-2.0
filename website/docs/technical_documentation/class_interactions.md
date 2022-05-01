@@ -30,14 +30,32 @@ class Configuration{
   +AsPrimitive()
 }
 
+class ConfigurationService{
+  -configuration
+  +setConfiguration(config)
+  +getConfiguration()
+  +addTargetPriority(area, target)
+  +removeTargetPriority(area, target)
+  +getPriority(area, target)
+}
+
+class ITargetPriorityQueryable{
+  <<Interface>>
+  +getPriority(area, target)
+}
+
 Bashing *-- TargetList
 Bashing *-- Attacker
 Bashing *-- BattlerageTracker
-Bashing *-- Configuration
+Bashing *-- ConfigurationService
+
+ITargetPriorityQueryable <|-- ConfigurationService
+ConfigurationService --> Configuration
+
 
 AreaPriorities *-- PriorityList
 
-TargetList --> AreaPriorities
+TargetList --> ITargetPriorityQueryable
 
 Attacker --> TargetList
 Attacker --> QueueManager
