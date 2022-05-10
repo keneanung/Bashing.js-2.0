@@ -22,7 +22,7 @@
     "clsx": "^1.1.1",
     "file-loader": "^6.2.0",
     "mdx-mermaid": "^1.2.2",
-    "mermaid": "^9.0.1",
+    "mermaid": "^9.1.0",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
