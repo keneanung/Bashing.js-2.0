@@ -10,7 +10,7 @@
     "@keneanung/iron-realms-nexus-typings": "^0.3.0",
     "@keneanung/nexus-package-builder": "^1.2.0",
     "@types/jest": "^28.1.8",
-    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.41.0",
     "acorn": "^8.8.1",
     "eslint": "^8.26.0",
